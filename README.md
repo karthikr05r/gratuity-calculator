@@ -1,4 +1,9 @@
-# Gratuity Calculator — Karthik 44110355
+# Gratuity Calculator
+
+## Team Members
+- Karthik R - 44110355
+- Karunanidhi M - 44110358
+
 
 A responsive, beginner-friendly gratuity calculator built with HTML, CSS, and vanilla JavaScript. It can run locally in a browser and be published free with GitHub Pages.
 
