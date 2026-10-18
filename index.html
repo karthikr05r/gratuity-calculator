@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A simple gratuity calculator to estimate gratuity based on last drawn basic salary, DA, and years of service." />
+  <title>Gratuity Calculator | Karthik</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Gratuity Calculator home">
+      <span class="brand-mark">₹</span>
+      <span>Gratuity<span class="brand-light">Calc</span></span>
+    </a>
+    <span class="header-note">Simple • Fast • Free</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> FINANCIAL PLANNING TOOL</div>
+      <h1>Calculate your <span>gratuity.</span></h1>
+      <p class="hero-copy">Estimate the gratuity you may receive based on your salary and years of service.</p>
+    </section>
+
+    <section class="calculator-card" aria-labelledby="calculator-title">
+      <div class="card-heading">
+        <div>
+          <h2 id="calculator-title">Gratuity calculator</h2>
+          <p>Enter your salary details below.</p>
+        </div>
+        <div class="calculator-icon" aria-hidden="true">₹</div>
+      </div>
+
+      <form id="gratuity-form">
+        <div class="field">
+          <label for="salary">Last drawn monthly Basic + DA <span>(₹)</span></label>
+          <div class="input-wrap">
+            <span class="currency">₹</span>
+            <input id="salary" name="salary" type="number" min="1" step="0.01" placeholder="e.g. 35000" required />
+          </div>
+          <small>Enter your monthly basic salary plus dearness allowance, not your full CTC.</small>
+        </div>
+
+        <div class="field">
+          <label for="years">Completed years of service</label>
+          <div class="input-wrap">
+            <input id="years" name="years" type="number" min="0" max="100" step="1" placeholder="e.g. 5" required />
+            <span class="input-suffix">years</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="months">Additional completed months <span>(optional)</span></label>
+          <div class="input-wrap">
+            <input id="months" name="months" type="number" min="0" max="11" step="1" value="0" />
+            <span class="input-suffix">months</span>
+          </div>
+          <small>For the common 5-year rule, service of more than 6 months in an additional year may count as the next year, subject to applicable law.</small>
+        </div>
+
+        <button class="calculate-button" type="submit">Calculate gratuity <span aria-hidden="true">→</span></button>
+        <button class="reset-button" type="reset">Reset values</button>
+      </form>
+
+      <div id="result" class="result-panel" aria-live="polite" hidden>
+        <div class="result-topline">YOUR ESTIMATED GRATUITY</div>
+        <div id="amount" class="result-amount">₹0</div>
+        <p id="result-note" class="result-note"></p>
+        <div class="result-breakdown">
+          <div><span>Monthly Basic + DA</span><strong id="result-salary">₹0</strong></div>
+          <div><span>Service counted</span><strong id="result-service">0 years</strong></div>
+          <div><span>Calculation method</span><strong>Last salary × 15 ÷ 26 × years</strong></div>
+        </div>
+        <p class="disclaimer">This is an estimate, not legal or financial advice. Eligibility, rounding, statutory limits, and applicable rules can change the actual amount. Confirm with your employer or HR team.</p>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-card">
+        <div class="info-number">01</div>
+        <h3>What is gratuity?</h3>
+        <p>Gratuity is a lump-sum benefit an eligible employee may receive from an employer when leaving employment, subject to applicable rules.</p>
+      </article>
+      <article class="info-card">
+        <div class="info-number">02</div>
+        <h3>How is it estimated?</h3>
+        <p>For employees covered by the common formula, the estimate is: Last drawn Basic + DA × 15 ÷ 26 × eligible years of service.</p>
+      </article>
+      <article class="info-card">
+        <div class="info-number">03</div>
+        <h3>Check your eligibility</h3>
+        <p>Eligibility and the applicable formula may depend on employment type, length of service, and current law. Check with HR for your situation.</p>
+      </article>
+    </section>
+
+    <p class="page-footnote">Made for learning and estimation · Karthik 44110355</p>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Karthik 44110355</span>
+    <span>Gratuity Calculator</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
